@@ -1,0 +1,29 @@
+{
+  "type": "psychedelicraft:mashing",
+  "base_fluid": {
+    "amount": {
+      "min": 182250
+    },
+    "fluid": [
+      "minecraft:water"
+    ]
+  },
+  "id": "psychedelicraft:wheat_hop_from_mashing",
+  "ingredients": [
+    {
+      "count": 6,
+      "ingredient": {
+        "item": "minecraft:wheat"
+      }
+    },
+    {
+      "count": 2,
+      "ingredient": {
+        "item": "psychedelicraft:hop_cones"
+      }
+    }
+  ],
+  "result": {
+    "fluid": "psychedelicraft:wheat_hop"
+  }
+}

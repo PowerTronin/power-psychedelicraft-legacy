@@ -1,15 +1,15 @@
-Psychedelicraft
-============
+Power Psychedelicraft Legacy
+============================
 
-[![Current Version](https://img.shields.io/github/v/tag/Sollace/Psychedelicraft)](https://img.shields.io/github/v/tag/Sollace/Psychedelicraft)
-[![Build Status](https://github.com/Sollace/Psychedelicraft/actions/workflows/gradle-build.yml/badge.svg)](https://github.com/Sollace/Psychedelicraft/actions/workflows/gradle-build.yml)
-![Downloads](https://img.shields.io/github/downloads/Sollace/Psychedelicraft/total.svg?color=yellowgreen)
-![License](https://img.shields.io/github/license/Sollace/Psychedelicraft)
-![](https://img.shields.io/badge/api-fabric-orange.svg)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green.svg)
+![API](https://img.shields.io/badge/API-Fabric-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
-The One And Only, accept no substitutes!
+A personal legacy fork of Psychedelicraft for Fabric 1.20.1.
 
- [Wiki](https://github.com/Sollace/Psychedelicraft/wiki) | [Forum](http://www.minecraftforum.net/topic/563257-172-ivorius-mods-drugs-statues-flags-boxes-of-doom-hamsters/) 
+[Original Project](https://github.com/Sollace/Psychedelicraft) | [Original Wiki](https://github.com/Sollace/Psychedelicraft/wiki) | [Forum](http://www.minecraftforum.net/topic/563257-172-ivorius-mods-drugs-statues-flags-boxes-of-doom-hamsters/)
+
+Based on Psychedelicraft by Ivorius, TripleHeadedSheep, and Sollace. This fork keeps the original MIT license and copyright notice.
 
 ----------
 
@@ -28,9 +28,9 @@ Notes And References
 Granted Attribution
 ============
 
-This mod was released by Ivorious under the MIT license, as stipulated by them:
+This mod was released by Ivorius under the MIT license, as stipulated by them:
  - Link to this page
- - and mention the creator's/maintainers (Ivoriou's) name)
+ - and mention the creator's/maintainers' names
 
 and you may use this mod in modpacks.
 

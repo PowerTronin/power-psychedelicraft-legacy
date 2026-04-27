@@ -1,0 +1,14 @@
+{
+  "type": "psychedelicraft:drying",
+  "cookingTime": 0.6,
+  "experience": 0.2,
+  "group": "leaves",
+  "id": "psychedelicraft:dried_tobacco_from_drying",
+  "ingredient": {
+    "item": "psychedelicraft:tobacco"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:dried_tobacco"
+  }
+}

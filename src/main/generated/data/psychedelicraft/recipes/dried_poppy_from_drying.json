@@ -1,0 +1,14 @@
+{
+  "type": "psychedelicraft:drying",
+  "cookingTime": 0.4,
+  "experience": 0.2,
+  "group": "flowers",
+  "id": "psychedelicraft:dried_poppy_from_drying",
+  "ingredient": {
+    "item": "minecraft:poppy"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:dried_poppy"
+  }
+}

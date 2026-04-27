@@ -1,0 +1,26 @@
+{
+  "type": "psychedelicraft:reacting",
+  "id": "psychedelicraft:belladonna_extract_from_reacting",
+  "ingredients": {
+    "fluids": [
+      {
+        "fluid": "minecraft:water"
+      }
+    ],
+    "solids": [
+      {
+        "item": "psychedelicraft:belladonna_seeds"
+      }
+    ]
+  },
+  "result": {
+    "by_product": {
+      "Count": 1,
+      "id": "minecraft:coal"
+    },
+    "fluid": {
+      "amount": 50,
+      "fluid": "psychedelicraft:belladonna_extract"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "parent": "psychedelicraft:make_drying_table",
+  "criteria": {
+    "has_the_thing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "psychedelicraft:red_magic_mushrooms"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.dry_red_mushrooms.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:red_magic_mushrooms"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.dry_red_mushrooms.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_thing"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

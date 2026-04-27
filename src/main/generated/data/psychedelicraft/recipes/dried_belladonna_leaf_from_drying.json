@@ -1,0 +1,14 @@
+{
+  "type": "psychedelicraft:drying",
+  "cookingTime": 0.3,
+  "experience": 0.2,
+  "group": "leaves",
+  "id": "psychedelicraft:dried_belladonna_leaf_from_drying",
+  "ingredient": {
+    "item": "psychedelicraft:belladonna_leaf"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:dried_belladonna_leaf"
+  }
+}

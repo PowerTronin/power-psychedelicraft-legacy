@@ -1,0 +1,23 @@
+{
+  "type": "psychedelicraft:smelting_receptical",
+  "category": "food",
+  "experience": 0.2,
+  "id": "psychedelicraft:hot_coffee_from_smelting",
+  "input": {
+    "fluid": {
+      "fluid": "psychedelicraft:coffee"
+    }
+  },
+  "result": {
+    "attributes": {
+      "warmth": {
+        "type": "add",
+        "value": 1
+      }
+    },
+    "result": {
+      "Count": 0,
+      "id": "minecraft:air"
+    }
+  }
+}

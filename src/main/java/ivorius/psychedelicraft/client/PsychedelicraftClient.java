@@ -48,7 +48,9 @@ public class PsychedelicraftClient implements ClientModInitializer {
     public void onInitializeClient() {
         try {
             getConfig().load();
-        } catch (Throwable t) {}
+        } catch (Throwable t) {
+            Psychedelicraft.LOGGER.error("Failed to load client config", t);
+        }
         Psychedelicraft.globalDrugProperties = () -> DrugProperties.of((Entity)MinecraftClient.getInstance().player);
         Psychedelicraft.crossHairTarget = () -> Optional.ofNullable(MinecraftClient.getInstance().crosshairTarget);
         ClientTickEvents.START_CLIENT_TICK.register(client -> {

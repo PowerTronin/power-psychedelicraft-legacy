@@ -1,0 +1,39 @@
+{
+  "parent": "psychedelicraft:root",
+  "criteria": {
+    "has_the_thing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "psychedelicraft:hash_muffin"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.hash_a_muffin.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:hash_muffin"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.hash_a_muffin.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_thing"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

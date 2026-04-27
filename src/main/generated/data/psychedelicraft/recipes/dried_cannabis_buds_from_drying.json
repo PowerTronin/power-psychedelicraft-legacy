@@ -1,0 +1,13 @@
+{
+  "type": "psychedelicraft:drying",
+  "experience": 0.2,
+  "group": "buds",
+  "id": "psychedelicraft:dried_cannabis_buds_from_drying",
+  "ingredient": {
+    "item": "psychedelicraft:cannabis_buds"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:dried_cannabis_buds"
+  }
+}

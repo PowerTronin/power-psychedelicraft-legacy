@@ -1,0 +1,25 @@
+{
+  "type": "psychedelicraft:fill_receptical",
+  "category": "misc",
+  "id": "psychedelicraft:cannabis_tea_from_mixing",
+  "ingredients": [
+    {
+      "item": "psychedelicraft:cannabis_leaf"
+    },
+    {
+      "item": "psychedelicraft:cannabis_leaf"
+    }
+  ],
+  "receptical": {
+    "fabric:type": "psychedelicraft:optional_fluid",
+    "fluid": {
+      "fluid": "minecraft:water"
+    },
+    "receptical": {
+      "tag": "psychedelicraft:receptical/drinks"
+    }
+  },
+  "result": {
+    "fluid": "psychedelicraft:cannabis_tea"
+  }
+}

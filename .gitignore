@@ -4,6 +4,9 @@ bin/
 build/
 run/
 generated/
+!src/main/generated/
+!src/main/generated/**
+src/main/generated/.cache/
 .classpath
 .project
 *.launch

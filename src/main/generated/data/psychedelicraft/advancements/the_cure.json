@@ -1,0 +1,33 @@
+{
+  "parent": "psychedelicraft:cancer",
+  "criteria": {
+    "is_cured": {
+      "conditions": {
+        "event": "cure_cancer"
+      },
+      "trigger": "psychedelicraft:custom"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.the_cure.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "psychedelicraft:jolly_rancher"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.the_cure.title"
+    }
+  },
+  "requirements": [
+    [
+      "is_cured"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

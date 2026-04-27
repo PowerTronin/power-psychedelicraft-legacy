@@ -1,0 +1,23 @@
+{
+  "type": "psychedelicraft:mashing",
+  "base_fluid": {
+    "amount": {
+      "min": 182250
+    },
+    "fluid": [
+      "minecraft:water"
+    ]
+  },
+  "id": "psychedelicraft:wheat_from_mashing",
+  "ingredients": [
+    {
+      "count": 8,
+      "ingredient": {
+        "item": "minecraft:wheat"
+      }
+    }
+  ],
+  "result": {
+    "fluid": "psychedelicraft:wheat"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "psychedelicraft:make_mash_tub",
+  "criteria": {
+    "mashed_item": {
+      "conditions": {
+        "fermentation": 2,
+        "fluid": "psychedelicraft:sugar_cane"
+      },
+      "trigger": "psychedelicraft:mashed_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.wash_sugar_cane.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:sugar_cane"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.wash_sugar_cane.title"
+    }
+  },
+  "requirements": [
+    [
+      "mashed_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

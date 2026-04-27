@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "# #",
+    "I I",
+    "###"
+  ],
+  "result": {
+    "item": "psychedelicraft:mash_tub"
+  },
+  "show_notification": true
+}

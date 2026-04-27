@@ -151,7 +151,7 @@ public class ShaderLoader implements SynchronousResourceReloader, IdentifiableRe
                         setter.set("pixelSize", 1F / screenWidth, 1F / screenHeight);
 
                         for (int n = 0; n < MathHelper.ceil(color.w()); n++) {
-                            setter.set("totalAlpha", Math.max(1, color.w() - n));
+                            setter.set("totalAlpha", Math.min(1, color.w() - n));
                             for (int i = 0; i < 2; i++) {
                                 setter.set("vertical", i);
                                 pass.run();

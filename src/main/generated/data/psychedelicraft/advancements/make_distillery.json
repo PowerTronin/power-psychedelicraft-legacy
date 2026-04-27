@@ -1,0 +1,39 @@
+{
+  "parent": "psychedelicraft:make_mash_tub",
+  "criteria": {
+    "has_the_thing": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "psychedelicraft:distillery"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.make_distillery.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:distillery"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.make_distillery.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_thing"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

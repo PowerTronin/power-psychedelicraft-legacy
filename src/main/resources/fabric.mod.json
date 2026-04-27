@@ -2,15 +2,13 @@
   "schemaVersion": 1,
   "id": "psychedelicraft",
   "version": "${version}",
-  "name": "Psychedelicraft",
-  "description": "Adds drugs into Minecraft. Psychedelicraft specializes on realism and effects. Shaders are being utilized, so keep that in mind.",
+  "name": "Power Psychedelicraft Legacy",
+  "description": "A legacy-focused Fabric 1.20.1 fork of Psychedelicraft, based on the original mod by Ivorius and maintainers.",
   "authors": [
     "Ivorius", "TripleHeadedSheep", "Sollace"
   ],
   "contact": {
-    "homepage": "http://www.minecraftforum.net/topic/563257-152",
-    "sources": "https://github.com/Sollace/Psychedelicraft",
-    "issues": "https://github.com/Sollace/Psychedelicraft/issues"
+    "homepage": "http://www.minecraftforum.net/topic/563257-152"
   },
   "license": "MIT",
   "icon": "logo.png",
@@ -52,7 +50,7 @@
     "modmenu": {
       "links": {
         "modmenu.discord": "https://discord.gg/mt7uwQ4",
-        "modmenu.github_releases": "https://github.com/Sollace/Psychedelicraft/releases"
+        "modmenu.original_project": "https://github.com/Sollace/Psychedelicraft"
       }
     }
   }

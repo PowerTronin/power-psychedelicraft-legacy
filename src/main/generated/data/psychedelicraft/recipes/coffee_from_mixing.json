@@ -1,0 +1,25 @@
+{
+  "type": "psychedelicraft:fill_receptical",
+  "category": "misc",
+  "id": "psychedelicraft:coffee_from_mixing",
+  "ingredients": [
+    {
+      "item": "psychedelicraft:coffee_beans"
+    },
+    {
+      "item": "psychedelicraft:coffee_beans"
+    }
+  ],
+  "receptical": {
+    "fabric:type": "psychedelicraft:optional_fluid",
+    "fluid": {
+      "fluid": "minecraft:water"
+    },
+    "receptical": {
+      "tag": "psychedelicraft:receptical/suitable_for_hot_drinks"
+    }
+  },
+  "result": {
+    "fluid": "psychedelicraft:coffee"
+  }
+}

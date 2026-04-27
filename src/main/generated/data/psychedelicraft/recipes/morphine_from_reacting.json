@@ -1,0 +1,26 @@
+{
+  "type": "psychedelicraft:reacting",
+  "id": "psychedelicraft:morphine_from_reacting",
+  "ingredients": {
+    "fluids": [
+      {
+        "fluid": "minecraft:water"
+      }
+    ],
+    "solids": [
+      {
+        "item": "minecraft:poppy"
+      }
+    ]
+  },
+  "result": {
+    "by_product": {
+      "Count": 1,
+      "id": "minecraft:coal"
+    },
+    "fluid": {
+      "amount": 50,
+      "fluid": "psychedelicraft:morphine"
+    }
+  }
+}

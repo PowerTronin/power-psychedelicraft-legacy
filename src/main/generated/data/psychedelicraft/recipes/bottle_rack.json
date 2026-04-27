@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "I#I",
+    "#I#",
+    "I#I"
+  ],
+  "result": {
+    "item": "psychedelicraft:bottle_rack"
+  },
+  "show_notification": true
+}

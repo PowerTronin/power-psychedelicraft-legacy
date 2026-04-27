@@ -46,7 +46,9 @@ public class Psychedelicraft implements ModInitializer {
         var config = new PSConfig(FabricLoader.getInstance().getConfigDir().resolve(DEFAULT_NAMESPACE + ".json"));
         try {
             config.load();
-        } catch (Throwable t) {}
+        } catch (Throwable t) {
+            LOGGER.error("Failed to load server config {}", config, t);
+        }
         return config;
     });
 

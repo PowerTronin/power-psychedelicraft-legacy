@@ -1,0 +1,26 @@
+{
+  "type": "psychedelicraft:reacting",
+  "id": "psychedelicraft:jimsonweed_extract_from_reacting",
+  "ingredients": {
+    "fluids": [
+      {
+        "fluid": "minecraft:water"
+      }
+    ],
+    "solids": [
+      {
+        "item": "psychedelicraft:jimsonweed_seeds"
+      }
+    ]
+  },
+  "result": {
+    "by_product": {
+      "Count": 1,
+      "id": "minecraft:coal"
+    },
+    "fluid": {
+      "amount": 50,
+      "fluid": "psychedelicraft:jimsonweed_extract"
+    }
+  }
+}

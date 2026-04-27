@@ -1,0 +1,25 @@
+{
+  "type": "psychedelicraft:fill_receptical",
+  "category": "misc",
+  "id": "psychedelicraft:agave_from_mixing",
+  "ingredients": [
+    {
+      "item": "psychedelicraft:agave_leaf"
+    },
+    {
+      "item": "psychedelicraft:agave_leaf"
+    }
+  ],
+  "receptical": {
+    "fabric:type": "psychedelicraft:optional_fluid",
+    "fluid": {
+      "fluid": "minecraft:water"
+    },
+    "receptical": {
+      "tag": "psychedelicraft:receptical/drinks"
+    }
+  },
+  "result": {
+    "fluid": "psychedelicraft:agave"
+  }
+}

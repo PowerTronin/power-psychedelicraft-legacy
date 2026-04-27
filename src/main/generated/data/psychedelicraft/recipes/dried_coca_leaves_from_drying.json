@@ -1,0 +1,13 @@
+{
+  "type": "psychedelicraft:drying",
+  "experience": 0.2,
+  "group": "leaves",
+  "id": "psychedelicraft:dried_coca_leaves_from_drying",
+  "ingredient": {
+    "item": "psychedelicraft:coca_leaves"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:dried_coca_leaves"
+  }
+}

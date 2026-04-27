@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_foods/tomatoes": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "c:foods/tomatoes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "psychedelicraft:tomato_from_mashing"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_foods/tomatoes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "psychedelicraft:tomato_from_mashing"
+    ]
+  },
+  "sends_telemetry_event": false
+}

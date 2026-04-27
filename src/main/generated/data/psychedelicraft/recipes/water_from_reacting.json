@@ -1,0 +1,24 @@
+{
+  "type": "psychedelicraft:reacting",
+  "group": "impurities",
+  "id": "minecraft:water_from_reacting",
+  "ingredients": {
+    "solids": [
+      {
+        "item": "psychedelicraft:broken_glass"
+      }
+    ]
+  },
+  "reaction_type": "additions",
+  "result": {
+    "by_product": {
+      "Count": 0,
+      "id": "minecraft:air"
+    },
+    "fluid": {
+      "amount": 5,
+      "fluid": "minecraft:water"
+    },
+    "impurity": "silica"
+  }
+}

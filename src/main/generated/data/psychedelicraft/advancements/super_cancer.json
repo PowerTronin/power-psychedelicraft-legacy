@@ -1,0 +1,43 @@
+{
+  "parent": "psychedelicraft:cancer",
+  "criteria": {
+    "has_side_effect": {
+      "conditions": {
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:player"
+            }
+          }
+        ],
+        "event": "cancer"
+      },
+      "trigger": "psychedelicraft:custom"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.super_cancer.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "item": "psychedelicraft:cigarette",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.super_cancer.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_side_effect"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

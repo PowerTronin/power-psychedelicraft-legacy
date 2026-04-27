@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "obsidian_bottle",
+  "ingredients": [
+    {
+      "item": "psychedelicraft:obsidian_bottle"
+    }
+  ],
+  "result": {
+    "item": "psychedelicraft:obsidian_dust"
+  }
+}

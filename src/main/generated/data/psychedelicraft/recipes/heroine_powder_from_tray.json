@@ -1,0 +1,20 @@
+{
+  "type": "psychedelicraft:hardening",
+  "amount": {
+    "type": "minecraft:uniform",
+    "value": {
+      "max_inclusive": 6,
+      "min_inclusive": 3
+    }
+  },
+  "core_fluid": {
+    "fluid": "psychedelicraft:morphine"
+  },
+  "group": "",
+  "id": "psychedelicraft:heroine_powder_from_tray",
+  "result": {
+    "Count": 1,
+    "id": "psychedelicraft:heroine_powder"
+  },
+  "solutions": []
+}

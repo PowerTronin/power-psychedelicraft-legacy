@@ -1,0 +1,33 @@
+{
+  "parent": "psychedelicraft:wash_grapes",
+  "criteria": {
+    "done_the_thing": {
+      "conditions": {
+        "event": "get_hangover"
+      },
+      "trigger": "psychedelicraft:custom"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.splitting_headache.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:bottle"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.splitting_headache.title"
+    }
+  },
+  "requirements": [
+    [
+      "done_the_thing"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

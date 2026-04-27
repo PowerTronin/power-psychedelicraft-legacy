@@ -1,0 +1,33 @@
+{
+  "parent": "psychedelicraft:just_say_no",
+  "criteria": {
+    "done_the_thing": {
+      "conditions": {
+        "event": "feed_villager"
+      },
+      "trigger": "psychedelicraft:custom"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.feed_a_villager.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:hash_muffin"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.feed_a_villager.title"
+    }
+  },
+  "requirements": [
+    [
+      "done_the_thing"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

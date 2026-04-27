@@ -66,7 +66,7 @@ class ModdedResourceFactory implements ResourceFactory {
                     }).toList();
                 }).stream();
             }
-            System.out.println("Failed to locate import: " + line);
+            Psychedelicraft.LOGGER.error("Failed to parse shader import: {}", line);
             return Stream.of("/*" + line + "*/");
         }
         return Stream.of(line);

@@ -1,0 +1,14 @@
+{
+  "type": "psychedelicraft:drying",
+  "cookingTime": 0.4,
+  "experience": 0.2,
+  "group": "magic_mushrooms",
+  "id": "psychedelicraft:brown_magic_mushrooms_from_drying",
+  "ingredient": {
+    "item": "minecraft:brown_mushroom"
+  },
+  "result": {
+    "Count": 3,
+    "id": "psychedelicraft:brown_magic_mushrooms"
+  }
+}

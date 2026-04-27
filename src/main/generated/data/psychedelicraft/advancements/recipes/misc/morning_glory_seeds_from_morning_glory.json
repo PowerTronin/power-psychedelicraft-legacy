@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_morning_glory": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "psychedelicraft:morning_glory"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:morning_glory_seeds_from_morning_glory"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_morning_glory",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:morning_glory_seeds_from_morning_glory"
+    ]
+  },
+  "sends_telemetry_event": false
+}

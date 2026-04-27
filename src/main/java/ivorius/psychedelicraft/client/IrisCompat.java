@@ -13,6 +13,7 @@ import org.joml.Vector4f;
 
 import com.google.common.base.Suppliers;
 
+import ivorius.psychedelicraft.Psychedelicraft;
 import ivorius.psychedelicraft.client.render.shader.FloatSupplier;
 import ivorius.psychedelicraft.client.render.shader.UniformCollection;
 
@@ -46,7 +47,7 @@ public final class IrisCompat {
             Object supplier = site.getTarget().invoke(value);
             return (T)supplier;
         } catch (Throwable e) {
-            e.printStackTrace();
+            Psychedelicraft.LOGGER.error("Failed to wrap Iris float supplier", e);
             return null;
         }
     }
@@ -60,7 +61,7 @@ public final class IrisCompat {
                     MethodType.methodType(UniformHolder.get(), UniformUpdateFrequency.get(), String.class, valueType))
                 .invoke(reference, UniformUpdateFrequency.get().getEnumConstants()[2], uniformName, value);
         } catch (Throwable e) {
-            e.printStackTrace();
+            Psychedelicraft.LOGGER.error("Failed to register Iris uniform {}", uniformName, e);
         }
     }
 

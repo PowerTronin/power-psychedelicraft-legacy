@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
+    "O": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "III",
+    "IOI",
+    "OIO"
+  ],
+  "result": {
+    "item": "psychedelicraft:lattice"
+  },
+  "show_notification": true
+}

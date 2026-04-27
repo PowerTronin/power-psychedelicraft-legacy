@@ -1,0 +1,36 @@
+{
+  "parent": "psychedelicraft:wash_grapes",
+  "criteria": {
+    "drink_brandy": {
+      "conditions": {
+        "item": {
+          "nbt": "{}"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancements.psychedelicraft.drink_brandy.description"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "psychedelicraft:wooden_mug",
+      "nbt": "{psychedelicraft_fluids:{attributes:{distillation:7,fermentation:1},fluid:\"psychedelicraft:red_grapes\"}}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancements.psychedelicraft.drink_brandy.title"
+    }
+  },
+  "requirements": [
+    [
+      "drink_brandy"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

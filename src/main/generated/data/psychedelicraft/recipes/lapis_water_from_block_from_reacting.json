@@ -1,0 +1,24 @@
+{
+  "type": "psychedelicraft:reacting",
+  "group": "impurities",
+  "id": "minecraft:lapis_water_from_block_from_reacting",
+  "ingredients": {
+    "solids": [
+      {
+        "item": "minecraft:lapis_block"
+      }
+    ]
+  },
+  "reaction_type": "additions",
+  "result": {
+    "by_product": {
+      "Count": 0,
+      "id": "minecraft:air"
+    },
+    "fluid": {
+      "amount": 45,
+      "fluid": "minecraft:water"
+    },
+    "impurity": "lapis_lazuli"
+  }
+}

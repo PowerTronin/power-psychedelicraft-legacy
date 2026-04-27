@@ -1,0 +1,26 @@
+{
+  "type": "psychedelicraft:reacting",
+  "id": "psychedelicraft:morning_glory_extract_from_reacting",
+  "ingredients": {
+    "fluids": [
+      {
+        "fluid": "minecraft:water"
+      }
+    ],
+    "solids": [
+      {
+        "tag": "psychedelicraft:ingredients/morning_glory"
+      }
+    ]
+  },
+  "result": {
+    "by_product": {
+      "Count": 1,
+      "id": "minecraft:coal"
+    },
+    "fluid": {
+      "amount": 50,
+      "fluid": "psychedelicraft:morning_glory_extract"
+    }
+  }
+}

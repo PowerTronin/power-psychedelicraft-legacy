@@ -9,9 +9,9 @@ import net.minecraft.client.texture.Sprite;
 @Pseudo
 @Mixin(targets = {
         "me.jellysquid.mods.sodium.client.render.texture.SpriteUtil"
-})
+}, remap = false)
 public interface JellySquidSpriteUtil {
-    @Invoker
+    @Invoker("markSpriteActive")
     static void invokeMarkSpriteActive(Sprite sprite) {
 
     }
