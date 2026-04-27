@@ -1,162 +1,182 @@
-# Plants and Resources
+# Растения и ресурсы
 
-Растения являются основой почти всех цепочек мода.
+Растения - основа почти всех цепочек мода. Часть культур можно найти в мире, часть проще добыть через лут или торговлю жителей.
 
-## Cannabis
+## Быстрая карта применений
 
-Используется для cannabis tea, joints, blunts, bong/pipe mechanics и hash muffin.
+| Ресурс | Основное применение |
+| --- | --- |
+| Каннабис | Косяки, бланты, чай, бонг, трубка, маффин. |
+| Табак | Сигареты, сигары, бланты. |
+| Кока | Чай из коки, кокаиновый порошок, жидкий кокаин. |
+| Кофейное дерево | Кофе, кофеин. |
+| Хмель | Пивная линия. |
+| Можжевельник | Джин и деревянный набор блоков. |
+| Белладонна | Экстракт белладонны, атропин. |
+| Дурман | Экстракт дурмана, атропин. |
+| Помидор | Соковая и алкогольная линия. |
+| Пейот | Сок пейота, сушеный пейот, косяк с пейотом. |
+| Ипомея | LSA/LSD и химическая линия. |
+| Агава | Агава, мескаль, текила. |
+| Виноград | Вино, бренди, уксус. |
 
-Материалы:
-
-- Cannabis Seeds.
-- Cannabis Leaf.
-- Dried Cannabis Leaf.
-- Cannabis Buds.
-- Dried Cannabis Buds.
-
-Основные цепочки:
-
-- Cannabis Buds -> Drying Table -> Dried Cannabis Buds.
-- Cannabis Leaf -> Drying Table -> Dried Cannabis Leaf.
-- Dried Cannabis Buds + paper -> Joint.
-- Dried Tobacco + Dried Cannabis Leaf -> Blunt.
-
-## Tobacco
-
-Используется для cigarettes, cigars, blunts и smoking pipe/bong.
+## Каннабис
 
 Материалы:
 
-- Tobacco Seeds.
-- Tobacco Leaves.
-- Dried Tobacco.
-
-Основные цепочки:
-
-- Tobacco Leaves -> Drying Table -> Dried Tobacco.
-- Paper + Dried Tobacco + Paper -> Cigarette.
-- Dried Tobacco + paper -> Cigar.
-
-## Coca
-
-Используется для coca tea, cocaine powder и cocaine fluid.
-
-Материалы:
-
-- Coca Seeds.
-- Coca Leaves.
-- Dried Coca Leaves.
-- Cocaine Powder.
-
-Основные цепочки:
-
-- Coca Leaves -> Drying Table -> Dried Coca Leaves.
-- Dried Coca Leaves -> Cocaine Powder.
-- Coca Leaves + water-filled drink receptacle -> Coca Tea.
-- Cocaine Powder + Cocaine Powder + water-filled drug receptacle -> Cocaine fluid.
-
-## Coffea
-
-Используется для coffee и caffeine.
-
-Материалы:
-
-- Coffea Cherries.
-- Coffee Beans.
-
-Основные цепочки:
-
-- Coffea Cherries -> smelting -> Coffee Beans.
-- Coffee Beans + Coffee Beans + water-filled drug receptacle -> Caffeine fluid.
-- Coffee Beans + water-filled hot drink receptacle -> Coffee.
-
-## Hops
-
-Используется для beer line.
-
-Материалы:
-
-- Hop Seeds.
-- Hop Cones.
-
-Recipe:
-
-- 6 Wheat + 2 Hop Cones в Mash Tub -> Wheat Hop base.
-
-## Juniper
-
-Используется для gin line и wood set.
-
-Материалы:
-
-- Juniper Berries.
-- Juniper wood blocks/items.
-
-Recipe:
-
-- 4 Juniper Berries + 2 Grapes + Sugar + Wheat в Mash Tub -> Juniper base.
-
-## Nightshade Family
-
-В моде есть Belladonna, Jimsonweed и Tomato.
-
-Belladonna:
-
-- Belladonna Berries -> Belladonna Seeds.
-- Belladonna Leaf -> Drying Table -> Dried Belladonna Leaf.
-- Belladonna Seeds + Water в Bunsen Burner -> Belladonna Extract.
-
-Jimsonweed:
-
-- Jimsonweed Seed Pod -> Jimsonweed Seeds.
-- Jimsonweed Leaf -> Drying Table -> Dried Jimsonweed Leaf.
-- Jimsonweed Seeds + Water в Bunsen Burner -> Jimsonweed Extract.
-
-Tomato:
-
-- Tomato -> Tomato Seeds.
-- Tomato используется в alcohol/juice line через Mash Tub.
-
-## Peyote
-
-Используется для peyote juice, dried peyote и peyote joint.
+- Семена каннабиса.
+- Лист каннабиса.
+- Сушеный лист каннабиса.
+- Соцветия каннабиса.
+- Сушеные соцветия каннабиса.
 
 Цепочки:
 
-- Peyote -> Drying Table -> Dried Peyote.
-- Peyote + water-filled drink receptacle -> Peyote Juice.
-- Dried Peyote используется в smoking recipes.
+| Действие | Результат |
+| --- | --- |
+| Соцветия каннабиса -> стол для сушки | Сушеные соцветия каннабиса |
+| Лист каннабиса -> стол для сушки | Сушеный лист каннабиса |
+| Сушеные соцветия + бумага | Косяк |
+| Сушеный табак + сушеный лист каннабиса | Блант |
 
-## Morning Glory
-
-Используется в LSD/LSA и chemical line.
+## Табак
 
 Материалы:
 
-- Morning Glory.
-- Morning Glory Seeds.
+- Семена табака.
+- Лист табака.
+- Сушеный табак.
 
 Цепочки:
 
-- Morning Glory -> Morning Glory Seeds.
-- Morning Glory или Morning Glory Seeds + Water в Bunsen Burner -> Morning Glory Extract.
-- Morning Glory Extract -> purification в Bunsen Burner -> Perfume -> Concentrate -> Acid.
+| Действие | Результат |
+| --- | --- |
+| Лист табака -> стол для сушки | Сушеный табак |
+| Бумага + сушеный табак + бумага | Сигарета |
+| Сушеный табак + бумага | Сигара |
 
-## Agave
+## Кока
 
-Используется для agave drink и tequila/mezcal alcohol line.
+Материалы:
+
+- Семена коки.
+- Листья коки.
+- Сушеные листья коки.
+- Кокаиновый порошок.
 
 Цепочки:
 
-- Agave Leaf + water-filled drink receptacle -> Agave fluid.
-- Agave Leaf в Mash Tub -> Agave alcohol base.
+| Действие | Результат |
+| --- | --- |
+| Листья коки -> стол для сушки | Сушеные листья коки |
+| Сушеные листья коки -> крафт | Кокаиновый порошок |
+| Листья коки + питьевая емкость с водой | Чай из коки |
+| 2 кокаиновых порошка + подходящая емкость с водой | Жидкий кокаин |
 
-## Wine Grapes
+## Кофейное дерево
 
-Используются для wine/brandy/vinegar line.
+Материалы:
+
+- Кофейные ягоды.
+- Кофейные зерна.
+
+Цепочки:
+
+| Действие | Результат |
+| --- | --- |
+| Кофейные ягоды -> печь | Кофейные зерна |
+| Кофейные зерна + емкость с водой для горячих напитков | Кофе |
+| 2 кофейных зерна + подходящая емкость с водой | Кофеин |
+
+## Хмель
+
+Материалы:
+
+- Семена хмеля.
+- Шишки хмеля.
+
+Главная цепочка:
+
+```text
+6 пшеницы + 2 шишки хмеля в чане -> пшенично-хмелевая основа
+```
+
+## Можжевельник
+
+Материалы:
+
+- Ягоды можжевельника.
+- Можжевеловые бревна, доски, лодки, двери, таблички и другие деревянные блоки.
+
+Главная цепочка:
+
+```text
+4 ягоды можжевельника + 2 винограда + сахар + пшеница в чане -> можжевеловая основа
+```
+
+## Пасленовые
+
+В моде есть белладонна, дурман и помидор.
+
+| Растение | Цепочки |
+| --- | --- |
+| Белладонна | Ягоды -> семена; лист -> сушеный лист; семена + вода в горелке -> экстракт белладонны. |
+| Дурман | Семенная коробочка -> семена; лист -> сушеный лист; семена + вода в горелке -> экстракт дурмана. |
+| Помидор | Помидор -> семена; помидор используется в чане для соковой/алкогольной основы. |
+
+## Пейот
+
+Цепочки:
+
+| Действие | Результат |
+| --- | --- |
+| Пейот -> стол для сушки | Сушеный пейот |
+| Пейот + питьевая емкость с водой | Сок пейота |
+| Сушеный пейот + курительный рецепт | Косяк с пейотом |
+
+## Ипомея
+
+Ипомея используется в LSA/LSD и химической линии.
+
+```mermaid
+flowchart LR
+  A[Ипомея или семена ипомеи] --> B[Горелка Бунзена + вода]
+  B --> C[Экстракт ипомеи]
+  C --> D[Духи из ипомеи]
+  D --> E[Концентрат ипомеи]
+  E --> F[Кислота]
+```
+
+Материалы:
+
+- Ипомея.
+- Семена ипомеи.
+
+Основные результаты:
+
+- Концентрат ипомеи используется для марки ЛСА.
+- Кислота подается в поднос для таблетки ЛСД.
+
+## Агава
+
+Цепочки:
+
+| Действие | Результат |
+| --- | --- |
+| Лист агавы + питьевая емкость с водой | Жидкость агавы |
+| Лист агавы в чане | Основа агавы |
+
+Через брожение и перегонку агава выходит в мескаль и варианты текилы.
+
+## Виноград
 
 Цепочка:
 
-- Grapes в Mash Tub -> Red Grapes base.
-- После fermentation/maturation/distillation получаются wine/brandy variants.
-
+```mermaid
+flowchart LR
+  A[Виноград в чане] --> B[Виноградная основа]
+  B --> C[Брожение]
+  C --> D[Вино]
+  C --> E[Бренди]
+  C --> F[Уксус]
+```

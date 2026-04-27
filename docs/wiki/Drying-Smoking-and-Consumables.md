@@ -1,140 +1,133 @@
-# Drying Smoking and Consumables
+# Сушка, курение и расходники
 
-## Drying
+Эта страница покрывает сухие ингредиенты, курительные предметы, съедобные предметы и емкости для жидкостных рецептов.
 
-Drying Table превращает свежие растения в пригодные для smoking/crafting ингредиенты.
+## Сушка
 
-Ключевые рецепты:
+Стол для сушки превращает свежие растения в ингредиенты для крафта, курения и дальнейших цепочек.
 
-- Cannabis Buds -> Dried Cannabis Buds.
-- Cannabis Leaf -> Dried Cannabis Leaf.
-- Tobacco Leaves -> Dried Tobacco.
-- Coca Leaves -> Dried Coca Leaves.
-- Belladonna Leaf -> Dried Belladonna Leaf.
-- Jimsonweed Leaf -> Dried Jimsonweed Leaf.
-- Peyote -> Dried Peyote.
-- Poppy -> Dried Poppy.
-- Brown/Red Mushroom -> Magic Mushrooms.
+| Вход | Выход |
+| --- | --- |
+| Соцветия каннабиса | Сушеные соцветия каннабиса |
+| Лист каннабиса | Сушеный лист каннабиса |
+| Лист табака | Сушеный табак |
+| Листья коки | Сушеные листья коки |
+| Лист белладонны | Сушеный лист белладонны |
+| Лист дурмана | Сушеный лист дурмана |
+| Пейот | Сушеный пейот |
+| Мак | Сушеный мак |
+| Коричневый или красный гриб | Волшебные грибы |
 
 Практические условия:
 
-- Лучше ставить под крышей или в помещении.
+- Лучше ставить стол под крышей или в помещении.
 - Дождь останавливает сушку, если блок видит небо.
 - Больше света и тепла ускоряет процесс.
-- Iron Drying Table быстрее обычного.
+- Железный стол для сушки быстрее обычного.
 
-## Smoking Items
+## Курительные предметы
 
-Cigarette:
+### Сигарета
 
 ```text
 P
 T
 P
 
-P = paper
-T = dried tobacco
+P = бумага
+T = сушеный табак
 ```
 
-Joint:
+### Косяк
 
 ```text
 P
 C
 P
 
-P = paper
-C = dried cannabis buds
+P = бумага
+C = сушеные соцветия каннабиса
 ```
 
-Cigar:
+### Сигара
 
 ```text
 TTT
 TTT
 PPP
 
-T = dried tobacco
-P = paper
+T = сушеный табак
+P = бумага
 ```
 
-Blunt:
+### Блант
 
 ```text
 TTT
 TTT
 CCC
 
-T = dried tobacco
-C = dried cannabis leaf
+T = сушеный табак
+C = сушеный лист каннабиса
 ```
 
-Smoking Pipe:
+### Трубка
 
 ```text
   I
  S 
 WS 
 
-I = iron ingot
-S = stick
-W = planks
+I = железный слиток
+S = палка
+W = доски
 ```
 
-Bong:
+### Бонг
 
 ```text
  P 
 G G
 GGG
 
-P = glass pane
-G = glass block
+P = стеклянная панель
+G = стеклянный блок
 ```
 
-## Edibles and Misc
+## Съедобные и особые предметы
 
-Hash Muffin:
+| Предмет | Как получить | Назначение |
+| --- | --- | --- |
+| Маффин с гашишем | Рецепт с ингредиентами каннабиса и едой. | Съедобный предмет с эффектом. |
+| Волшебные грибы | Сушка коричневых или красных грибов. | Съедобные предметы с эффектами. |
+| Косяк с пейотом | Курительный рецепт с сушеным пейотом. | Курительный предмет с эффектом пейота. |
+| Соска | Крафт/лут. | Помогает против урона от скрежета зубами. |
 
-- Использует cannabis ingredients и food recipe.
-- Имеет вариант с dye.
+## Емкости для веществ
 
-Magic Mushrooms:
+Эти емкости используются в жидкостных рецептах для лекарственных/химических жидкостей.
 
-- Получаются сушкой brown/red mushrooms.
-- Это edible items с drug effects.
-
-Peyote Joint:
-
-- Использует dried peyote и smoking recipe.
-
-## Drug Receptacles
-
-Drug receptacles используются в жидкостных crafting recipes.
-
-Подходящие receptacles:
-
-- Syringe.
-- Glass Bottle.
-- Filled Glass Bottle.
+| Емкость | Где полезна |
+| --- | --- |
+| Шприц | Малый injectable-контейнер. |
+| Стеклянная бутылка | Малые рецепты и перенос воды/лавы. |
+| Заполненная стеклянная бутылка | Vanilla-style контейнер для рецептов. |
+| Модовая бутылка | Большой контейнер и large mode горелки Бунзена. |
 
 Примеры:
 
-- Water-filled drug receptacle + 2 Coffee Beans -> Caffeine.
-- Water-filled drug receptacle + 2 Cocaine Powder -> Cocaine.
-- Water-filled drug receptacle + lava bottle + Obsidian Dust -> Bath Salts.
+- Емкость с водой + 2 кофейных зерна -> кофеин.
+- Емкость с водой + 2 кокаиновых порошка -> жидкий кокаин.
+- Емкость с водой + бутылка лавы + обсидиановая пыль -> соли для ванн.
 
-## Drink Holders
+## Емкости для напитков
 
-Основные drink holders:
-
-- Wooden Mug.
-- Stone Cup.
-- Glass Chalice.
-- Shot Glass.
-- Bottle.
-- Bowl/Filled Bowl.
-- Glass Bottle/Filled Glass Bottle.
-
-Stone Cup особенно важен для hot drinks, включая Coffee.
-
+| Емкость | Область применения |
+| --- | --- |
+| Деревянная кружка | Общие напитки. |
+| Чашка | Горячие напитки, включая кофе. |
+| Стеклянный кубок | Напитки и алкоголь. |
+| Стопка | Малые порции алкоголя. |
+| Бутылка | Большой переносимый контейнер. |
+| Миска/заполненная миска | Некоторые drink recipes. |
+| Стеклянная бутылка | Малый универсальный контейнер. |

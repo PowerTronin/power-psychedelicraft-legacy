@@ -1,20 +1,25 @@
 # Power Psychedelicraft Legacy Wiki
 
-Эта директория содержит актуальную wiki форка в формате Markdown.
+Эта директория содержит русскую GitHub Wiki форка в формате Markdown.
 
-GitHub Wiki для приватного репозитория сейчас не включается через API, поэтому страницы хранятся здесь и версионируются вместе с кодом. Если позже GitHub Wiki будет включена вручную или репозиторий станет публичным, эти файлы можно перенести в `.wiki.git` без переработки содержания.
+Основная точка входа для игроков:
+
+```text
+https://github.com/PowerTronin/power-psychedelicraft-legacy/wiki
+```
+
+Raw-ссылки GitHub открывают исходный Markdown как plain text. Для чтения нужно использовать обычные `/wiki/...` страницы.
 
 ## Страницы
 
-- [Home](Home.md)
-- [Quick Start](Quick-Start.md)
-- [Stations and Recipes](Stations-and-Recipes.md)
-- [Plants and Resources](Plants-and-Resources.md)
-- [Drying Smoking and Consumables](Drying-Smoking-and-Consumables.md)
-- [Alcohol Fermentation and Distillation](Alcohol-Fermentation-and-Distillation.md)
-- [Chemistry Line](Chemistry-Line.md)
-- [Fluids Containers and Pipes](Fluids-Containers-and-Pipes.md)
-- [Worldgen Loot and Villagers](Worldgen-Loot-and-Villagers.md)
-- [Effects Config and Troubleshooting](Effects-Config-and-Troubleshooting.md)
-- [License and Attribution](License-and-Attribution.md)
-
+- [Главная](Home.md)
+- [Быстрый старт](Quick-Start.md)
+- [Станции и рецепты](Stations-and-Recipes.md)
+- [Растения и ресурсы](Plants-and-Resources.md)
+- [Сушка, курение и расходники](Drying-Smoking-and-Consumables.md)
+- [Алкоголь, брожение и перегонка](Alcohol-Fermentation-and-Distillation.md)
+- [Химическая линия](Chemistry-Line.md)
+- [Жидкости, емкости и трубы](Fluids-Containers-and-Pipes.md)
+- [Генерация, лут и жители](Worldgen-Loot-and-Villagers.md)
+- [Эффекты, конфиг и проблемы](Effects-Config-and-Troubleshooting.md)
+- [Лицензия и атрибуция](License-and-Attribution.md)

@@ -1,147 +1,156 @@
-# Chemistry Line
+# Химическая линия
 
 Этот раздел описывает только внутриигровую механику мода. Он не является реальной химической инструкцией.
 
-## Основные блоки
+## Что нужно собрать
 
-- Bunsen Burner: reactions, extraction, purification.
-- Glass Tube: перенос горячих fluid packets.
-- Glass Valve: труба с ручным open/close.
-- Pump: redstone-насос для source fluids из мира.
-- Flask: большой fluid buffer.
-- Tray: hardening/crystallisation endpoint.
+| Блок или предмет | Русское название | Назначение |
+| --- | --- | --- |
+| `Bunsen Burner` | Горелка Бунзена | Реакции, очистка и добавление примесей. |
+| `Glass Tube` | Стеклянная труба | Перенос горячих пакетов жидкости. |
+| `Glass Valve` | Стеклянный клапан | Ручное открытие/закрытие потока. |
+| `Pump` | Насос | Выкачивание source-жидкостей из мира по редстоуну. |
+| `Flask` | Колба | Большой буфер жидкости. |
+| `Tray` | Поднос | Затвердевание и кристаллизация результата. |
 
-## Как работает Bunsen Burner
+## Общая схема
+
+```mermaid
+flowchart TD
+  A[Модовая бутылка на горелке Бунзена] --> B[Вода или другая жидкость]
+  B --> C[Твердый ингредиент или очистка]
+  C --> D[Выход сверху]
+  D --> E[Колба]
+  D --> F[Поднос]
+  D --> G[Дальнейшая труба]
+```
 
 Практичная сборка:
 
 ```text
-Glass Tube / Flask / Tray input
+Стеклянная труба / колба / вход подноса
         ^
         |
- Bunsen Burner
+ Горелка Бунзена
         |
- Redstone or heat source
+ Редстоун или источник тепла
 ```
 
 Шаги:
 
-1. Поставь Bunsen Burner.
-2. Поставь на него модовый Bottle.
+1. Поставь горелку Бунзена.
+2. Поставь на нее модовую бутылку.
 3. Залей воду или другую нужную жидкость.
-4. Добавь твердые ingredients.
-5. Подай redstone signal или heat source снизу.
-6. Подключи output сверху.
+4. Добавь твердые ингредиенты, если рецепт их требует.
+5. Подай редстоун или источник тепла снизу.
+6. Подключи выход сверху к стеклянной трубе, колбе или подносу.
 
-Важно:
+> Если сверху нет выхода, жидкий продукт будет потерян. Это самая частая ошибка в химической линии.
 
-- Для recipes с твердыми ingredients используй именно модовый Bottle.
-- Если output сверху не подключен, жидкий продукт будет wasted.
-- При перегреве пустой burner может ломать стекло и наносить damage рядом.
-
-## Reacting Recipes
+## Реакции в горелке
 
 Основные реакции:
 
-- Water + Belladonna Seeds -> Belladonna Extract + Coal.
-- Water + Jimsonweed Seeds -> Jimsonweed Extract + Coal.
-- Water + Morning Glory или Morning Glory Seeds -> Morning Glory Extract + Coal.
-- Water + Poppy -> Morphine + Coal.
-- Water + Coal -> Petrolium с petrolium impurity.
-- Water + Charcoal -> Petrolium с carbon impurity.
-- Water + Coal Block -> больше Petrolium с petrolium impurity.
+| Вход | Результат |
+| --- | --- |
+| Вода + семена белладонны | Экстракт белладонны + уголь |
+| Вода + семена дурмана | Экстракт дурмана + уголь |
+| Вода + ипомея или семена ипомеи | Экстракт ипомеи + уголь |
+| Вода + мак | Морфин + уголь |
+| Вода + уголь | Петролеум с примесью `petrolium` |
+| Вода + древесный уголь | Петролеум с примесью `carbon` |
+| Вода + блок угля | Больше петролеума с примесью `petrolium` |
 
-Additions/impurities:
+Добавки и примеси:
 
-- Broken Glass -> silica.
-- Sugar -> sugar.
-- Lapis Lazuli -> lapis_lazuli.
-- Lapis Block -> больше lapis_lazuli.
+| Добавка | Примесь |
+| --- | --- |
+| Битое стекло | `silica` |
+| Сахар | `sugar` |
+| Лазурит | `lapis_lazuli` |
+| Блок лазурита | Больше `lapis_lazuli` |
 
-Impurities важны для некоторых Tray recipes. Если жидкость идет через Flask, impurity-метка может не сохраниться. Для таких recipes веди output из burner в Tray напрямую через Glass Tube.
+> Примеси важны для некоторых рецептов подноса. Если жидкость идет через колбу, нужная метка может не сохраниться. Для таких рецептов веди выход из горелки напрямую в поднос через стеклянную трубу.
 
-## Extract Purification
+## Очистка экстрактов
 
-Chemical extracts можно дальше греть в Bunsen Burner без новых твердых ingredients.
+Экстракты можно дальше греть в горелке Бунзена без новых твердых ингредиентов.
 
-Morning Glory line:
+```mermaid
+flowchart LR
+  A[Экстракт] --> B[Духи]
+  B --> C[Концентрат]
+  C --> D[Финальная жидкость]
+```
 
-- Morning Glory Extract.
-- Morning Glory Perfume.
-- Morning Glory Concentrate.
-- Acid.
+| Линия | Стадии |
+| --- | --- |
+| Ипомея | Экстракт ипомеи -> духи из ипомеи -> концентрат ипомеи -> кислота |
+| Белладонна | Экстракт белладонны -> духи из белладонны -> концентрат белладонны -> атропин |
+| Дурман | Экстракт дурмана -> духи из дурмана -> концентрат дурмана -> атропин |
 
-Belladonna line:
+## Рецепты подноса
 
-- Belladonna Extract.
-- Belladonna Perfume.
-- Belladonna Concentrate.
-- Atropine.
+Поднос принимает жидкость только сверху через стеклянную трубу. После заполнения начинается затвердевание.
 
-Jimsonweed line:
+| Вход | Результат |
+| --- | --- |
+| Кислота | Таблетка ЛСД |
+| Экстракт ипомеи без `lapis_lazuli` | Кристаллический метамфетамин |
+| Экстракт ипомеи с `lapis_lazuli` | Синий кристаллический метамфетамин |
+| Морфин | Героин |
+| Этанол + раствор кокаина | Крэк-кокаин |
+| Вода | Сахар |
 
-- Jimsonweed Extract.
-- Jimsonweed Perfume.
-- Jimsonweed Concentrate.
-- Atropine.
+Результат обычно дает несколько предметов. Некоторые примеси увеличивают количество выхода, но также меняют эффекты.
 
-## Tray Recipes
+## Практические цепочки
 
-Tray принимает жидкость сверху через Glass Tube и начинает hardening после заполнения.
+### Марка ЛСА
 
-Рецепты:
+```mermaid
+flowchart LR
+  A[Ипомея или семена] --> B[Экстракт ипомеи]
+  B --> C[Концентрат ипомеи]
+  C --> D[Бумага + концентрат]
+  D --> E[Марка ЛСА]
+```
 
-- Acid -> LSD Tablet.
-- Morning Glory Extract без lapis_lazuli impurity -> Crystal Meth.
-- Morning Glory Extract с lapis_lazuli impurity -> Blue Crystal Meth.
-- Morphine -> Heroine.
-- Ethanol + Cocaine solution -> Crack Cocaine.
-- Water -> Sugar.
+1. Сделай экстракт ипомеи.
+2. Очисти его до концентрата ипомеи.
+3. Скрафти бумагу с концентратом.
 
-Результат обычно 3-6 items. Некоторые impurities увеличивают output count, но также меняют effects.
+### Таблетка ЛСД
 
-## Practical Lines
+1. Сделай экстракт ипомеи.
+2. Очисти его до кислоты.
+3. Подай кислоту в поднос сверху через стеклянную трубу.
 
-LSA Square:
+### Синий кристаллический метамфетамин
 
-- Сделай Morning Glory Extract.
-- Purify до Morning Glory Concentrate.
-- Craft Paper + Morning Glory Concentrate -> LSA Square.
+1. Сделай экстракт ипомеи.
+2. Добавь `lapis_lazuli` как примесь в горелке Бунзена.
+3. Веди жидкость напрямую из горелки в поднос через стеклянную трубу.
+4. Не используй колбу между горелкой и подносом, если нужна стабильная примесь.
 
-LSD Tablet:
+### Морфин и таблетка морфина
 
-- Сделай Morning Glory Extract.
-- Purify до Acid.
-- Подай Acid в Tray.
+1. Вода + мак в горелке Бунзена -> морфин.
+2. Морфин -> поднос -> героин.
+3. 4 героина в сетке 2x2 -> таблетка морфина.
 
-Blue Crystal Meth:
+### Крэк-кокаин
 
-- Сделай Morning Glory Extract.
-- Добавь lapis_lazuli addition в Bunsen Burner.
-- Выведи жидкость напрямую через трубы в Tray.
+1. Получи этанол.
+2. Получи жидкий кокаин.
+3. Подай этанол как базу в поднос.
+4. Подай раствор кокаина в тот же поднос.
 
-Morphine Tablet:
+## Петролеум и бензин
 
-- Water + Poppy -> Morphine.
-- Morphine -> Tray -> Heroine.
-- 4 Heroine в 2x2 -> Morphine Tablet.
+| Цепочка | Результат |
+| --- | --- |
+| Вода + уголь/древесный уголь/блок угля в горелке | Петролеум |
+| Петролеум -> дистиллятор | Бензин |
 
-Crack Cocaine:
-
-- Получи Ethanol.
-- Получи Cocaine fluid.
-- Подай Ethanol как base в Tray.
-- Подай Cocaine solution в тот же Tray.
-
-## Petrolium and Gasoline
-
-Petrolium:
-
-- Water + Coal/Charcoal/Coal Block в Bunsen Burner.
-
-Gasoline:
-
-- Petrolium -> Distillery -> Gasoline.
-
-Обе жидкости горючие. Храни их отдельно от огня, lava и случайного redstone-triggered setup.
-
+Обе жидкости горючие. Держи их отдельно от огня, лавы и случайных редстоун-срабатываний.

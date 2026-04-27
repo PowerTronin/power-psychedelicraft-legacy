@@ -1,36 +1,56 @@
 # Power Psychedelicraft Legacy Wiki
 
-Актуальная wiki для форка Power Psychedelicraft Legacy на Fabric 1.20.1.
+Актуальная русская вики для **Power Psychedelicraft Legacy**, форка Psychedelicraft под **Fabric 1.20.1**.
 
-Эта документация собрана по текущему коду и generated-рецептам форка, а не по устаревшей wiki оригинального проекта. Названия предметов и жидкостей оставлены в английском виде, потому что именно так они отображаются в текущих lang-файлах мода.
+> Важно: все процессы ниже описывают только внутриигровые механики Minecraft-мода. Это не реальные инструкции, не медицинская информация и не справочник по реальной химии.
 
-Важно: все описанные ниже процессы являются внутриигровыми механиками Minecraft-мода. Это не реальные инструкции и не справочник по реальной химии.
+## Как открывать красиво
+
+Используй обычные страницы GitHub Wiki:
+
+```text
+https://github.com/PowerTronin/power-psychedelicraft-legacy/wiki
+```
+
+Ссылки вида `raw.githubusercontent.com/wiki/.../*.md` всегда открывают исходный Markdown как обычный текст. Это нормально: raw-страницы нужны для копирования/автоматизации, а не для чтения.
 
 ## Быстрый маршрут
 
-1. Найди растения и семена: cannabis, tobacco, coca, coffea, hops, grapes, peyote, agave, morning glory, belladonna, jimsonweed.
-2. Сделай Drying Table или Iron Drying Table.
-3. Высуши листья, buds, peyote, poppy и грибы.
-4. Сделай Mash Tub, Barrel, Flask и Distillery для напитков и алкоголя.
-5. Сделай Bunsen Burner, Glass Tube, Glass Valve, Pump и Tray для химической линии.
-6. Используй recipe viewer, если он установлен: жидкостные рецепты в обычной книге Minecraft читаются хуже.
+```mermaid
+flowchart LR
+  A[Найти растения] --> B[Сушка]
+  B --> C[Курение и расходники]
+  A --> D[Чан]
+  D --> E[Брожение]
+  E --> F[Бочка или дистиллятор]
+  A --> G[Горелка Бунзена]
+  G --> H[Колба, трубы, поднос]
+```
+
+1. Найди растения, семена и ягоды: каннабис, табак, кока, кофе, хмель, виноград, пейот, агава, ипомея, белладонна, дурман.
+2. Сделай стол для сушки, чтобы получить сухие листья, соцветия, мак, пейот и грибы.
+3. Для напитков и алкоголя собери чан, бочки, колбу и дистиллятор.
+4. Для химической линии собери горелку Бунзена, стеклянные трубы, клапан, насос и поднос.
+5. Если установлен просмотрщик рецептов, используй его: жидкостные рецепты читаются в обычной книге Minecraft хуже.
 
 ## Разделы
 
-- [Quick Start](Quick-Start.md)
-- [Stations and Recipes](Stations-and-Recipes.md)
-- [Plants and Resources](Plants-and-Resources.md)
-- [Drying Smoking and Consumables](Drying-Smoking-and-Consumables.md)
-- [Alcohol Fermentation and Distillation](Alcohol-Fermentation-and-Distillation.md)
-- [Chemistry Line](Chemistry-Line.md)
-- [Fluids Containers and Pipes](Fluids-Containers-and-Pipes.md)
-- [Worldgen Loot and Villagers](Worldgen-Loot-and-Villagers.md)
-- [Effects Config and Troubleshooting](Effects-Config-and-Troubleshooting.md)
-- [License and Attribution](License-and-Attribution.md)
+| Раздел | Что внутри |
+| --- | --- |
+| [Быстрый старт](Quick-Start.md) | Survival-маршрут и базовые рецепты станций. |
+| [Станции и рецепты](Stations-and-Recipes.md) | Как работают стол сушки, чан, бочки, колба, дистиллятор, горелка и поднос. |
+| [Растения и ресурсы](Plants-and-Resources.md) | Где применяются культуры, ягоды, листья и семена. |
+| [Сушка, курение и расходники](Drying-Smoking-and-Consumables.md) | Сухие ингредиенты, курительные предметы, съедобные предметы и емкости. |
+| [Алкоголь, брожение и перегонка](Alcohol-Fermentation-and-Distillation.md) | Чан, ферментация, выдержка, дистилляция и этанол. |
+| [Химическая линия](Chemistry-Line.md) | Горелка Бунзена, примеси, очистка, поднос и практические цепочки. |
+| [Жидкости, емкости и трубы](Fluids-Containers-and-Pipes.md) | Объемы, контейнеры, стеклянные трубы, клапаны, насосы и вход подноса. |
+| [Генерация, лут и жители](Worldgen-Loot-and-Villagers.md) | Растения в мире, сундуки структур и торговля жителей. |
+| [Эффекты, конфиг и проблемы](Effects-Config-and-Troubleshooting.md) | Визуальные эффекты, настройки и типовые поломки. |
+| [Лицензия и атрибуция](License-and-Attribution.md) | MIT License, авторство оригинала и что изменено в форке. |
 
-## Чем эта wiki отличается от оригинальной
+## Чем эта вики отличается от оригинальной
 
-- Ориентирована на Fabric 1.20.1 branch этого форка.
-- Учитывает generated assets/data, без которых в 1.20.1 были отсутствующие модели, blockstates, sounds, recipes и tags.
-- Использует актуальные названия блоков и рецептов из текущей сборки.
-- Ставит практические цепочки выше декоративного каталога предметов.
+- Ориентирована на текущий форк **Power Psychedelicraft Legacy** для Fabric 1.20.1.
+- Собрана по актуальному коду и generated data, а не по устаревшей оригинальной wiki.
+- Использует русские названия из `ru_ru.json`; английское название дается в скобках там, где оно помогает найти предмет в рецептах.
+- Сфокусирована на практических цепочках: что поставить, куда подать жидкость, где чаще всего ломается процесс.
