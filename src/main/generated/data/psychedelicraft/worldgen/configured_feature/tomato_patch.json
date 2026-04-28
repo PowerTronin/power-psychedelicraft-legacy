@@ -13,7 +13,8 @@
               "state": {
                 "Name": "psychedelicraft:tomatoes",
                 "Properties": {
-                  "age": "0"
+                  "age": "0",
+                  "natural": "true"
                 }
               }
             },

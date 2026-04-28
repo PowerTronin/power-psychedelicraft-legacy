@@ -6,10 +6,7 @@
 package ivorius.psychedelicraft.block;
 
 import net.minecraft.block.*;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.state.property.IntProperty;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.BlockView;
 
 public class CocaPlantBlock extends CannabisPlantBlock {
     public static final IntProperty AGE_12 = IntProperty.of("age", 0, 12);
@@ -34,8 +31,4 @@ public class CocaPlantBlock extends CannabisPlantBlock {
         return 0.1F;
     }
 
-    @Override
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.FARMLAND) || floor.isOf(this) || floor.isIn(BlockTags.DIRT) || floor.isOf(Blocks.GRASS_BLOCK);
-    }
 }

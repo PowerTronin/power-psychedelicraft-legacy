@@ -13,6 +13,7 @@ import ivorius.psychedelicraft.world.gen.PSPlacedFeatures;
 import ivorius.psychedelicraft.world.gen.PSWorldGen;
 import ivorius.psychedelicraft.world.gen.TilledPatchFeature;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -60,9 +61,9 @@ final class PSWorldGenFeatures {
         registerable.register(PSFeatureConfigs.COFFEA_TILLED_PATCH, createTilledPatch(PSBlocks.COFFEA, false));
         registerable.register(PSFeatureConfigs.COCA_TILLED_PATCH, createTilledPatch(PSBlocks.COCA, true));
         registerable.register(PSFeatureConfigs.MORNING_GLORY_PATCH, createUnTilledPatch(PSBlocks.MORNING_GLORY, VineStemBlock.AGE, UniformIntProvider.create(0, VineStemBlock.MAX_AGE)));
-        registerable.register(PSFeatureConfigs.BELLADONNA_PATCH, createUnTilledPatch(PSBlocks.BELLADONNA, NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
-        registerable.register(PSFeatureConfigs.JIMSONWEED_PATCH, createUnTilledPatch(PSBlocks.JIMSONWEED, NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
-        registerable.register(PSFeatureConfigs.TOMATO_PATCH, createUnTilledPatch(PSBlocks.TOMATOES, NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
+        registerable.register(PSFeatureConfigs.BELLADONNA_PATCH, createUnTilledPatch(PSBlocks.BELLADONNA.getDefaultState().with(NightshadeBlock.NATURAL, true), NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
+        registerable.register(PSFeatureConfigs.JIMSONWEED_PATCH, createUnTilledPatch(PSBlocks.JIMSONWEED.getDefaultState().with(NightshadeBlock.NATURAL, true), NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
+        registerable.register(PSFeatureConfigs.TOMATO_PATCH, createUnTilledPatch(PSBlocks.TOMATOES.getDefaultState().with(NightshadeBlock.NATURAL, true), NightshadeBlock.AGE, UniformIntProvider.create(0, NightshadeBlock.MAX_AGE)));
         registerable.register(PSFeatureConfigs.PEYOTE_PATCH, createUnTilledPatch(PSBlocks.PEYOTE, PeyoteBlock.AGE, UniformIntProvider.create(0, PeyoteBlock.MAX_AGE)));
         registerable.register(PSFeatureConfigs.AGAVE_PATCH, createUnTilledPatch(PSBlocks.AGAVE_PLANT, AgavePlantBlock.AGE, UniformIntProvider.create(0, AgavePlantBlock.MAX_AGE)));
     }
@@ -108,10 +109,14 @@ final class PSWorldGenFeatures {
     }
 
     private static ConfiguredFeature<?, ?> createUnTilledPatch(Block plant, IntProperty ageProperty, IntProvider ageRange) {
+        return createUnTilledPatch(plant.getDefaultState(), ageProperty, ageRange);
+    }
+
+    private static ConfiguredFeature<?, ?> createUnTilledPatch(BlockState plantState, IntProperty ageProperty, IntProvider ageRange) {
         return new ConfiguredFeature<>(Feature.RANDOM_PATCH, ConfiguredFeatures.createRandomPatchFeatureConfig(
                 5,
                 PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
-                new SimpleBlockFeatureConfig(new RandomizedIntBlockStateProvider(BlockStateProvider.of(plant), ageProperty, ageRange)))));
+                new SimpleBlockFeatureConfig(new RandomizedIntBlockStateProvider(BlockStateProvider.of(plantState), ageProperty, ageRange)))));
     }
 
     private static void registerUnTilledPatchPlacement(Registerable<PlacedFeature> registerable, RegistryEntry<ConfiguredFeature<?, ?>> feature, RegistryKey<PlacedFeature> checkedPlacementId, RegistryKey<PlacedFeature> uncheckedPlacementId) {

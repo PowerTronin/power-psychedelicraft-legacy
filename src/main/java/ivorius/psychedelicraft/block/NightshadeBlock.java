@@ -3,6 +3,7 @@ package ivorius.psychedelicraft.block;
 import net.fabricmc.fabric.api.tag.convention.v1.ConventionalItemTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.block.ShapeContext;
@@ -11,12 +12,15 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
@@ -33,6 +37,7 @@ import net.minecraft.world.event.GameEvent;
 
 public class NightshadeBlock extends PlantBlock implements Fertilizable {
     public static final IntProperty AGE = Properties.AGE_7;
+    public static final BooleanProperty NATURAL = BooleanProperty.of("natural");
     public static final int MAX_AGE = Properties.AGE_7_MAX;
 
     private static final VoxelShape[] SHAPES = {
@@ -53,12 +58,32 @@ public class NightshadeBlock extends PlantBlock implements Fertilizable {
         super(settings);
         this.fruit = fruit;
         this.leaf = leaf;
-        setDefaultState(getDefaultState().with(AGE, 0));
+        setDefaultState(getDefaultState().with(AGE, 0).with(NATURAL, true));
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(AGE);
+        builder.add(AGE, NATURAL);
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return floor.isOf(Blocks.FARMLAND);
+    }
+
+    @Override
+    public BlockState getPlacementState(ItemPlacementContext ctx) {
+        BlockState state = super.getPlacementState(ctx);
+        return state == null ? null : state.with(NATURAL, false);
+    }
+
+    @Override
+    public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        if (state.get(NATURAL)) {
+            BlockState floor = world.getBlockState(pos.down());
+            return floor.isOf(Blocks.GRASS_BLOCK) || floor.isIn(BlockTags.DIRT);
+        }
+        return super.canPlaceAt(state, world, pos);
     }
 
     @Override
