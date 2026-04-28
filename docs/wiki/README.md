@@ -23,3 +23,7 @@ Raw-ссылки GitHub открывают исходный Markdown как plai
 - [Генерация, лут и жители](Worldgen-Loot-and-Villagers.md)
 - [Эффекты, конфиг и проблемы](Effects-Config-and-Troubleshooting.md)
 - [Лицензия и атрибуция](License-and-Attribution.md)
+
+## Изображения
+
+Скриншоты для страниц лежат в [images](images/). GitHub Wiki показывает их на обычных `/wiki/...` страницах; raw-ссылки продолжают открывать исходный Markdown.

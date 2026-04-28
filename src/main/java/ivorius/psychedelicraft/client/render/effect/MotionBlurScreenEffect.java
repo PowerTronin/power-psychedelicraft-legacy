@@ -79,9 +79,9 @@ public class MotionBlurScreenEffect implements ScreenEffect {
 
             textures.drawToScreen(context, currentSample);
         } else if (textures != null) {
-            currentSample++;
-            currentSample %= MAX_SAMPLES;
-            textures.getTexture(currentSample).reset();
+            close();
+            previousTicks = 0;
+            currentSample = 0;
         }
     }
 
@@ -136,7 +136,7 @@ public class MotionBlurScreenEffect implements ScreenEffect {
 
         public GlTexture(int sample, int width, int height) {
             this.sample = sample;
-            output = new SimpleFramebuffer(width, height, true, MinecraftClient.IS_SYSTEM_MAC);
+            output = new SimpleFramebuffer(width, height, false, MinecraftClient.IS_SYSTEM_MAC);
             output.viewportWidth = width;
             output.viewportHeight = height;
         }

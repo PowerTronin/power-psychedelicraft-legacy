@@ -56,10 +56,11 @@ public final class PhysicalFluid {
 
     @Nullable
     public Block getCauldron() {
-        if (standing == Fluids.WATER) {
+        Fluid standingFluid = getStandingFluid();
+        if (standingFluid == Fluids.WATER) {
             return Blocks.WATER_CAULDRON;
         }
-        if (standing == Fluids.LAVA && Blocks.LAVA_CAULDRON.getDefaultState().contains(LeveledCauldronBlock.LEVEL)) {
+        if (standingFluid == Fluids.LAVA && Blocks.LAVA_CAULDRON.getDefaultState().contains(LeveledCauldronBlock.LEVEL)) {
             return Blocks.LAVA_CAULDRON;
         }
         return PSBlocks.CAULDRON;
