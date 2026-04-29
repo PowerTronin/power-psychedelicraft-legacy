@@ -175,6 +175,7 @@ public interface PSItems {
     Item BOTTLE_RACK = register("bottle_rack", new VerticallyAttachableBlockItem(PSBlocks.BOTTLE_RACK, PSBlocks.WALL_BOTTLE_RACK, new Settings(), Direction.DOWN));
     Item DRYING_TABLE = register("drying_table", PSBlocks.DRYING_TABLE);
     Item IRON_DRYING_TABLE = register("iron_drying_table", PSBlocks.IRON_DRYING_TABLE);
+    Item GREENHOUSE_PLANTER = register("greenhouse_planter", PSBlocks.GREENHOUSE_PLANTER);
 
     HarmoniumItem HARMONIUM = register("harmonium", new HarmoniumItem(new Settings()));
 
@@ -235,6 +236,7 @@ public interface PSItems {
     Item BAG_O_VOMIT = register("bag_o_vomit", new SuspiciousItem(new Settings()
             .food(new FoodComponent.Builder().hunger(8).saturationModifier(0.8f).snack().alwaysEdible().build()
     ), SuspiciousItem.createForms(Items.COOKIE, Items.MUSHROOM_STEW, Items.GOLDEN_APPLE, Items.COOKED_BEEF, Items.COOKED_CHICKEN)));
+    Item LABORATORY_JOURNAL = register("laboratory_journal", new LaboratoryJournalItem(new Settings().maxCount(1)));
 
     Item TRAY = register("tray", PSBlocks.TRAY);
     Item BUNSEN_BURNER = register("bunsen_burner", PSBlocks.BUNSEN_BURNER);

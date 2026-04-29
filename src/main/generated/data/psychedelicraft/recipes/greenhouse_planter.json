@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bone_meal"
+    },
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "G": {
+      "tag": "c:glass_blocks"
+    }
+  },
+  "pattern": [
+    "G G",
+    "DBD",
+    "CCC"
+  ],
+  "result": {
+    "count": 2,
+    "item": "psychedelicraft:greenhouse_planter"
+  },
+  "show_notification": true
+}

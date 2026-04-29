@@ -39,7 +39,8 @@ abstract class MixinVillagerTaskListProvider {
     @Inject(method = "createWorkTasks(Lnet/minecraft/village/VillagerProfession;F)Lcom/google/common/collect/ImmutableList;", at = @At("HEAD"), cancellable = true)
     private static void onCreateWorkTasks(VillagerProfession profession, float speed,
             CallbackInfoReturnable<ImmutableList<Pair<Integer, ? extends Task<? super VillagerEntity>>>> info) {
-        if (profession == PSTradeOffers.DRUG_DEALER_PROFESSION) {
+        if (PSTradeOffers.customVillagerProfessionsEnabled()
+                && profession == PSTradeOffers.DRUG_DEALER_PROFESSION) {
             info.setReturnValue(DealerTaskListProvider.createWorkTasks(createBusyFollowTask(), speed));
         }
         if (profession == PSTradeOffers.DRUG_ADDICT_PROFESSION) {

@@ -36,6 +36,11 @@ public class PSConfig extends Config {
     public final Setting<Boolean> disableMolotovs = value("balancing", "disableMolotovs", false)
             .addComment("Sets whether molotov cocktails are (not) obtainable.")
             .addComment("Default: false");
+    public final Setting<Boolean> enableCustomVillagerProfessions = value("balancing", "enableCustomVillagerProfessions", true)
+            .addComment("Sets whether Psychedelicraft workstation villager professions can be acquired and traded with.")
+            .addComment("This keeps the registries intact for world compatibility, but prevents new villagers from taking workstation jobs.")
+            .addComment("Drug addicts created with hash muffins are not affected by this option.")
+            .addComment("Default: true");
 
     public final Setting<Generation> worldGeneration = value("balancing", "worldGeneration", new Generation(
             FeatureCustomConfig.DEFAULT, FeatureCustomConfig.DEFAULT,

@@ -7,6 +7,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import ivorius.psychedelicraft.PSDamageTypes;
+import ivorius.psychedelicraft.Psychedelicraft;
 import ivorius.psychedelicraft.advancement.PSCriteria;
 import ivorius.psychedelicraft.entity.PSTradeOffers;
 import ivorius.psychedelicraft.item.PSItems;
@@ -57,6 +58,16 @@ abstract class MixinVillagerEntity extends MerchantEntity implements VillagerDat
                     info.setReturnValue(ActionResult.CONSUME);
                 }
             }
+            return;
+        }
+
+        if (!Psychedelicraft.getConfig().enableCustomVillagerProfessions.get()
+                && PSTradeOffers.isCustomWorkstationProfession(getVillagerData().getProfession())) {
+            if (!getWorld().isClient) {
+                setVillagerData(getVillagerData().withProfession(VillagerProfession.NONE));
+                ((VillagerEntity)(Object)this).reinitializeBrain((ServerWorld)getWorld());
+            }
+            info.setReturnValue(ActionResult.SUCCESS);
         }
     }
 

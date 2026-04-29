@@ -60,6 +60,7 @@ public class PSBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 PSBlocks.GLASS_TUBE,
                 PSBlocks.GLASS_VALVE
         );
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE).add(PSBlocks.GREENHOUSE_PLANTER);
     }
 
     private void addJuniperWoodset() {

@@ -17,6 +17,12 @@ public class PSPointOfInterestTypeTagProvider extends FabricTagProvider<PointOfI
 
     @Override
     protected void configure(WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE).add(PSTradeOffers.DRUG_DEALER_POI.getValue());
+        getOrCreateTagBuilder(PointOfInterestTypeTags.ACQUIRABLE_JOB_SITE).add(
+                PSTradeOffers.DRUG_DEALER_POI.getValue(),
+                PSTradeOffers.APOTHECARY_POI.getValue(),
+                PSTradeOffers.BOTANIST_POI.getValue(),
+                PSTradeOffers.SMUGGLER_POI.getValue(),
+                PSTradeOffers.VINTNER_POI.getValue()
+        );
     }
 }

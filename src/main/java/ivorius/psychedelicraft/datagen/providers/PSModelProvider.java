@@ -51,6 +51,8 @@ public class PSModelProvider extends FabricModelProvider {
         generator.registerSingleton(PSBlocks.FRUITING_JUNIPER_LEAVES, TexturedModel.LEAVES);
         generator.registerParented(Blocks.CAULDRON, PSBlocks.CAULDRON);
         generator.registerParentedItemModel(PSBlocks.FRUITING_JUNIPER_LEAVES, ModelIds.getBlockModelId(PSBlocks.FRUITING_JUNIPER_LEAVES));
+        generator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(PSBlocks.GREENHOUSE_PLANTER, ModelIds.getBlockModelId(PSBlocks.GREENHOUSE_PLANTER)));
+        generator.registerParentedItemModel(PSBlocks.GREENHOUSE_PLANTER, ModelIds.getBlockModelId(PSBlocks.GREENHOUSE_PLANTER));
         generator.registerSimpleCubeAll(PSBlocks.GLITCH);
 
         PSBlocks.ALL_BARRELS.forEach(block -> BlockModels.registerBarrel(generator, block));
@@ -173,6 +175,8 @@ public class PSModelProvider extends FabricModelProvider {
 
                 PSItems.JUNIPER_BOAT, PSItems.JUNIPER_CHEST_BOAT, PSItems.JUNIPER_BERRIES
         );
+        Models.GENERATED.upload(ModelIds.getItemModelId(PSItems.LABORATORY_JOURNAL),
+                TextureMap.layer0(ModelIds.getItemModelId(Items.WRITTEN_BOOK)), generator.writer);
 
         List.of(
                 PSItems.JOINT, PSItems.PEYOTE_JOINT,

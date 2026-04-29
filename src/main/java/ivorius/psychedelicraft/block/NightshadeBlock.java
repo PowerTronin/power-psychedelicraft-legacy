@@ -7,6 +7,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.Fertilizable;
 import net.minecraft.block.PlantBlock;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.block.AbstractGlassBlock;
+import net.minecraft.block.PaneBlock;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -68,7 +70,7 @@ public class NightshadeBlock extends PlantBlock implements Fertilizable {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(Blocks.FARMLAND);
+        return floor.isOf(Blocks.FARMLAND) || floor.isOf(PSBlocks.GREENHOUSE_PLANTER);
     }
 
     @Override
@@ -98,11 +100,28 @@ public class NightshadeBlock extends PlantBlock implements Fertilizable {
 
     @Override
     public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (state.get(AGE) < MAX_AGE && random.nextInt(5) == 0 && world.getBaseLightLevel(pos.up(), 0) >= 9) {
+        int growthChance = isInGreenhouse(world, pos) ? 2 : 5;
+        if (state.get(AGE) < MAX_AGE && random.nextInt(growthChance) == 0 && world.getBaseLightLevel(pos.up(), 0) >= 9) {
             state = state.cycle(AGE);
             world.setBlockState(pos, state, Block.NOTIFY_LISTENERS);
             world.emitGameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Emitter.of(state));
         }
+    }
+
+    private static boolean isInGreenhouse(WorldView world, BlockPos pos) {
+        if (!world.getBlockState(pos.down()).isOf(PSBlocks.GREENHOUSE_PLANTER)) {
+            return false;
+        }
+        for (int y = 1; y <= 4; y++) {
+            if (isGreenhouseCover(world.getBlockState(pos.up(y)))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static boolean isGreenhouseCover(BlockState state) {
+        return state.getBlock() instanceof AbstractGlassBlock || state.getBlock() instanceof PaneBlock;
     }
 
     @Override

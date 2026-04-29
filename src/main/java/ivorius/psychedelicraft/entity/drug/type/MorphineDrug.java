@@ -29,6 +29,7 @@ public class MorphineDrug extends SimpleDrug {
             .put(HEART_BEAT_SPEED, (f, t) -> -f * 0.1F - (t * 0.0001F))
             .put(HAND_TREMBLE_STRENGTH, 0.1F)
             .put(VIEW_TREMBLE_STRENGTH, 0.2F)
+            .put(CONTEXTUAL_HALLUCINATION_STRENGTH, f -> MathUtils.project(f, 0.08F, 0.35F) * 0.9F)
             .put(PAIN_SUPPRESSION, f -> 1 - f * 0.9F)
             .build();
 

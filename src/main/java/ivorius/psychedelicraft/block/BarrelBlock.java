@@ -10,6 +10,7 @@ import ivorius.psychedelicraft.block.entity.BarrelBlockEntity;
 import ivorius.psychedelicraft.block.entity.PSBlockEntities;
 import ivorius.psychedelicraft.fluid.*;
 import ivorius.psychedelicraft.fluid.container.Resovoir;
+import ivorius.psychedelicraft.item.component.DrinkLabelComponent;
 import ivorius.psychedelicraft.item.component.FluidCapacity;
 import ivorius.psychedelicraft.item.component.ItemFluids;
 import ivorius.psychedelicraft.screen.FluidContraptionScreenHandler;
@@ -128,11 +129,12 @@ public class BarrelBlock extends FluidMachineBlock<BarrelBlockEntity> {
                     ItemFluids.Transaction t = ItemFluids.Transaction.begin(stack.copyWithCount(1));
 
                     if (tank.withdraw(t, MAX_TAP_AMOUNT) > 0) {
+                        ItemStack labelledStack = DrinkLabelComponent.apply(t.toItemStack(), world, player, state, t.fluids());
                         if (stack.getCount() > 1) {
                             stack.decrement(1);
-                            player.getInventory().offerOrDrop(t.toItemStack());
+                            player.getInventory().offerOrDrop(labelledStack);
                         } else {
-                            player.setStackInHand(hand, t.toItemStack());
+                            player.setStackInHand(hand, labelledStack);
                         }
                     }
 

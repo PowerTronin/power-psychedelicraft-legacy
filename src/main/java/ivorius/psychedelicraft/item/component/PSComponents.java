@@ -11,6 +11,7 @@ public interface PSComponents {
     ComponentType<RiftFractionComponent> RIFT_FRACTION = register("rift_fraction", builder -> builder.codec(RiftFractionComponent.CODEC).packetCodec(RiftFractionComponent.PACKET_CODEC));
     ComponentType<ItemFluids> FLUIDS = register("fluids", builder -> builder.codec(ItemFluids.CODEC).packetCodec(ItemFluids.PACKET_CODEC));
     ComponentType<ItemFluidsMixture> FLUIDS_MIXTURE = register("fluids_mixture", builder -> builder.codec(ItemFluidsMixture.CODEC).packetCodec(ItemFluidsMixture.PACKET_CODEC));
+    ComponentType<DrinkLabelComponent> DRINK_LABEL = register("drink_label", builder -> builder.codec(DrinkLabelComponent.CODEC).packetCodec(DrinkLabelComponent.PACKET_CODEC));
     ComponentType<FluidCapacity> FLUID_CAPACITY = register("fluid_capacity", builder -> builder.codec(FluidCapacity.CODEC).packetCodec(FluidCapacity.PACKET_CODEC));
     ComponentType<Processable.ProcessType> PROCESS_TYPE = register("process_type", builder -> builder.codec(Processable.ProcessType.CODEC).packetCodec(Processable.ProcessType.PACKET_CODEC));
     ComponentType<ItemDrugs> DRUGS = register("drugs", builder -> builder.codec(ItemDrugs.CODEC).packetCodec(ItemDrugs.PACKET_CODEC));

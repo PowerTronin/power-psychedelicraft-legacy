@@ -34,6 +34,8 @@ public interface PSItemGroups {
             .entries((context, entries) -> {
                 entries.add(PSItems.DRYING_TABLE);
                 entries.add(PSItems.IRON_DRYING_TABLE);
+                entries.add(PSItems.GREENHOUSE_PLANTER);
+                entries.add(PSItems.LABORATORY_JOURNAL);
                 entries.add(PSItems.FLASK);
                 entries.add(PSItems.DISTILLERY);
                 entries.add(PSItems.BOTTLE_RACK);

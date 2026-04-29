@@ -54,6 +54,7 @@ public class PSBlockLootTableProvider extends FabricBlockLootTableProvider {
         List.of(
                 PSBlocks.DRYING_TABLE,
                 PSBlocks.IRON_DRYING_TABLE,
+                PSBlocks.GREENHOUSE_PLANTER,
 
                 PSBlocks.JUNIPER_BUTTON,
                 PSBlocks.JUNIPER_FENCE_GATE,

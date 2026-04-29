@@ -72,6 +72,7 @@ public class RecepticalHandler {
     public static ItemStack applyFluid(ItemStack stack, ItemFluids contents) {
         if (contents.isEmpty()) {
             StackCompat.remove(stack, PSComponents.FLUIDS);
+            StackCompat.remove(stack, PSComponents.DRINK_LABEL);
         } else {
             StackCompat.set(stack, PSComponents.FLUIDS, contents);
         }

@@ -225,6 +225,10 @@
 
   "entity.minecraft.villager.drug_dealer": "Diler",
   "entity.minecraft.villager.drug_addict": "Ćpun",
+  "entity.minecraft.villager.apothecary": "Aptekarz",
+  "entity.minecraft.villager.botanist": "Botanik",
+  "entity.minecraft.villager.smuggler": "Przemytnik",
+  "entity.minecraft.villager.vintner": "Winiarz",
 
   "psychedelicraft.sleep.fail.coccaine": "Jesteś zbyt naćpany żeby zasnąć",
   "psychedelicraft.sleep.fail.caffiene": "Nie czujesz zmęczenia",

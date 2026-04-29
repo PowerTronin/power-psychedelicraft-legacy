@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "psychedelicraft:drug_dealer"
+    "psychedelicraft:drug_dealer",
+    "psychedelicraft:apothecary",
+    "psychedelicraft:botanist",
+    "psychedelicraft:smuggler",
+    "psychedelicraft:vintner"
   ]
 }

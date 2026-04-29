@@ -12,9 +12,12 @@ import ivorius.psychedelicraft.Psychedelicraft;
 import ivorius.psychedelicraft.client.item.PSModelPredicates;
 import ivorius.psychedelicraft.client.render.*;
 import ivorius.psychedelicraft.client.render.shader.ShaderLoader;
+import ivorius.psychedelicraft.client.screen.LaboratoryJournalScreen;
 import ivorius.psychedelicraft.client.screen.PSScreens;
 import ivorius.psychedelicraft.entity.drug.DrugProperties;
 import ivorius.psychedelicraft.fluid.Processable;
+import ivorius.psychedelicraft.item.LaboratoryJournalItem;
+import ivorius.psychedelicraft.item.component.DrinkLabelComponent;
 import ivorius.psychedelicraft.item.component.FluidCapacity;
 import ivorius.psychedelicraft.item.component.Impurities;
 import ivorius.psychedelicraft.item.component.ItemDrugs;
@@ -53,6 +56,7 @@ public class PsychedelicraftClient implements ClientModInitializer {
         }
         Psychedelicraft.globalDrugProperties = () -> DrugProperties.of((Entity)MinecraftClient.getInstance().player);
         Psychedelicraft.crossHairTarget = () -> Optional.ofNullable(MinecraftClient.getInstance().crosshairTarget);
+        LaboratoryJournalItem.setClientOpener(() -> MinecraftClient.getInstance().setScreen(new LaboratoryJournalScreen()));
         ClientTickEvents.START_CLIENT_TICK.register(client -> {
             DrugProperties.of((Entity)client.player).ifPresent(properties -> {
                 DrugRenderer.INSTANCE.update(properties, client.player);
@@ -84,6 +88,7 @@ public class PsychedelicraftClient implements ClientModInitializer {
 
             ItemDrugs.get(stack).appendTooltip(context, tooltip::add);
             Impurities.get(stack).appendTooltip(context, tooltip::add);
+            DrinkLabelComponent.get(stack).ifPresent(label -> label.appendTooltip(context, tooltip::add));
 
             if (!lines.isEmpty()) {
                 lines.addAll(1, tooltip);

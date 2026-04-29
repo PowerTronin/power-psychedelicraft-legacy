@@ -233,6 +233,15 @@ public class PSRecipeProvider extends FabricRecipeProvider {
         offerShapelessRecipe(exporter, PSItems.BELLADONNA_SEEDS, PSItems.BELLADONNA_BERRIES, "seeds", 6);
         offerShapelessRecipe(exporter, PSItems.JIMSONWEED_SEEDS, PSItems.JIMSONWEED_SEED_POD, "seeds", 6);
         offerShapelessRecipe(exporter, PSItems.MORNING_GLORY_SEEDS, PSItems.MORNING_GLORY, "seeds", 6);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, PSItems.GREENHOUSE_PLANTER, 2)
+            .input('G', ConventionalItemTags.GLASS_BLOCKS).criterion("has_glass", conditionsFromTag(ConventionalItemTags.GLASS_BLOCKS))
+            .input('D', Items.DIRT).criterion(hasItem(Items.DIRT), conditionsFromItem(Items.DIRT))
+            .input('B', Items.BONE_MEAL)
+            .input('C', Items.CLAY_BALL)
+            .pattern("G G")
+            .pattern("DBD")
+            .pattern("CCC")
+            .offerTo(exporter);
         offerSmelting(exporter, List.of(PSItems.COFFEA_CHERRIES), RecipeCategory.FOOD, PSItems.COFFEE_BEANS, 0.2F, 100, "drugs");
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, PSItems.HASH_MUFFIN)
@@ -270,6 +279,12 @@ public class PSRecipeProvider extends FabricRecipeProvider {
     }
 
     private void offerChemistryUpdateRecipes(Consumer<RecipeJsonProvider> exporter) {
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, PSItems.LABORATORY_JOURNAL)
+            .input(Items.BOOK).criterion(hasItem(Items.BOOK), conditionsFromItem(Items.BOOK))
+            .input(Items.PAPER)
+            .input(Items.GLASS_BOTTLE)
+            .input(Items.REDSTONE)
+            .offerTo(exporter);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, PSItems.BUNSEN_BURNER)
             .input('r', Items.REDSTONE).criterion(hasItem(Items.REDSTONE), conditionsFromItem(Items.REDSTONE))
             .input('n', Items.IRON_NUGGET).criterion(hasItem(Items.IRON_NUGGET), conditionsFromItem(Items.IRON_NUGGET))

@@ -6,6 +6,7 @@
 package ivorius.psychedelicraft.client.render;
 
 import ivorius.psychedelicraft.Psychedelicraft;
+import ivorius.psychedelicraft.client.render.hallucination.ContextualHallucinationEffects;
 import ivorius.psychedelicraft.client.render.effect.*;
 import ivorius.psychedelicraft.client.render.shader.PostEffectRenderer;
 import ivorius.psychedelicraft.client.render.shader.ShaderContext;
@@ -54,6 +55,7 @@ public class DrugRenderer {
     private final PostEffectRenderer postEffects = new PostEffectRenderer();
 
     private final ClientDrugMusicManager musicManager = new ClientDrugMusicManager();
+    private final ContextualHallucinationEffects contextualHallucinations = new ContextualHallucinationEffects();
 
     public ScreenEffect getScreenEffects() {
         return screenEffects;
@@ -74,6 +76,7 @@ public class DrugRenderer {
     public void update(DrugProperties drugProperties, LivingEntity entity) {
         getScreenEffects().update(ShaderContext.tickDelta());
         musicManager.update(drugProperties);
+        contextualHallucinations.update(drugProperties);
     }
 
     public void distortScreen(MatrixStack matrices, Camera camera, float tickDelta) {
@@ -218,6 +221,7 @@ public class DrugRenderer {
                 }
             }
         }
+        contextualHallucinations.renderFakeOres(matrices, vertices, camera, tickDelta, drugProperties);
     }
 
 }

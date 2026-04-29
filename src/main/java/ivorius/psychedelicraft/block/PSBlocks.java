@@ -64,6 +64,8 @@ public interface PSBlocks {
 
     Block DRYING_TABLE = register("drying_table", new DryingTableBlock(Settings.create().mapColor(MapColor.OAK_TAN).solid().sounds(BlockSoundGroup.WOOD).hardness(2).burnable()));
     Block IRON_DRYING_TABLE = register("iron_drying_table", new DryingTableBlock(Settings.create().mapColor(MapColor.IRON_GRAY).sounds(BlockSoundGroup.METAL).hardness(5)));
+    Block GREENHOUSE_PLANTER = register("greenhouse_planter", new GreenhousePlanterBlock(Settings.create().mapColor(MapColor.DIRT_BROWN)
+            .sounds(BlockSoundGroup.GRAVEL).strength(0.6F).ticksRandomly()));
 
     JuniperLeavesBlock JUNIPER_LEAVES = register("juniper_leaves", new JuniperLeavesBlock(BlockConstructionUtils.leaves(BlockSoundGroup.GRASS)));
     JuniperLeavesBlock FRUITING_JUNIPER_LEAVES = register("fruiting_juniper_leaves", new JuniperLeavesBlock(BlockConstructionUtils.leaves(BlockSoundGroup.GRASS)));
