@@ -104,4 +104,18 @@ public class DriftingCamera {
             }
         }
     }
+
+    public void reset() {
+        intensity = 0;
+        distance = 0;
+        totalRotation = 0;
+        prevPosition = Vec3d.ZERO;
+        prevRotation = Vec3d.ZERO;
+        position = Vec3d.ZERO;
+        velocity = Vec3d.ZERO;
+        rotation = Vec3d.ZERO;
+        accellerationX = 0;
+        accellerationY = 0;
+        accellerationZ = 0;
+    }
 }

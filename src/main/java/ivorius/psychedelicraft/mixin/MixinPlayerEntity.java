@@ -15,6 +15,7 @@ import com.mojang.datafixers.util.Either;
 import ivorius.psychedelicraft.entity.drug.*;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtElement;
@@ -46,6 +47,14 @@ abstract class MixinPlayerEntity extends LivingEntity implements DrugPropertiesC
     @Inject(method = "tick()V", at = @At("RETURN"))
     private void afterTick(CallbackInfo info) {
         getDrugProperties().onTick();
+    }
+
+    @Inject(method = "onDeath", at = @At("HEAD"))
+    private void onDeath(DamageSource source, CallbackInfo info) {
+        getDrugProperties().clearAllEffects();
+        if (!getWorld().isClient) {
+            getDrugProperties().sendCapabilities();
+        }
     }
 
     @Inject(method = "wakeUp(ZZ)V", at = @At("HEAD"), cancellable = true)

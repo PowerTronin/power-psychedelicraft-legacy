@@ -13,6 +13,7 @@ import ivorius.psychedelicraft.entity.drug.hallucination.HallucinationManager;
 import ivorius.psychedelicraft.entity.drug.influence.DrugInfluence;
 import ivorius.psychedelicraft.entity.drug.influence.DrugInfluenceInstance;
 import ivorius.psychedelicraft.entity.drug.sound.DrugMusicManager;
+import ivorius.psychedelicraft.entity.drug.type.SimpleDrug;
 import ivorius.psychedelicraft.entity.effect.PSEffects;
 import ivorius.psychedelicraft.item.PacifierItem;
 import ivorius.psychedelicraft.network.Channel;
@@ -222,6 +223,33 @@ public class DrugProperties implements NbtSerialisable {
         changed |= stomach.reset();
         markDirty();
         return changed;
+    }
+
+    public void clearAllEffects() {
+        cancerCountdown = -1;
+        teethGrindingRate = 0;
+        breathSmokeColor = null;
+        timeBreathingSmoke = 0;
+        pacifierSqueakDelay = -1;
+        prevCardiacArrestTicks = 0;
+        cardiacArrestTicks = 0;
+        cardiacArrestRegenCooldown = 0;
+        strokeIntensity = 0;
+        strokeRecoveryCooldown = 0;
+        prevHadCancer = false;
+        influences.clear();
+        drugs.values().forEach(drug -> {
+            drug.setLocked(false);
+            drug.reset(this);
+            drug.setDesiredValue(0);
+            if (drug instanceof SimpleDrug simpleDrug) {
+                simpleDrug.setActiveValue(0);
+            }
+        });
+        hallucinations.reset();
+        soundManager.reset();
+        stomach.reset();
+        markDirty();
     }
 
     public boolean hasCancer() {
@@ -496,8 +524,7 @@ public class DrugProperties implements NbtSerialisable {
             cancerCountdown = old.cancerCountdown;
             prevHadCancer = old.prevHadCancer;
         } else {
-            cancerCountdown = -1;
-            prevHadCancer = false;
+            clearAllEffects();
             initial = true;
         }
         soundManager.copyFrom(old.soundManager, alive);

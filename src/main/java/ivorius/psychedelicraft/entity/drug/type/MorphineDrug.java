@@ -19,8 +19,15 @@ public class MorphineDrug extends SimpleDrug {
     public static final DrugAttributeFunctions MORPHINE_FUNCTIONS = DrugAttributeFunctions.builder()
             .put(HEART_BEAT_VOLUME, (f, t) -> MathUtils.project(f, 0.4F, 1))
             .put(HEART_BEAT_SPEED, (f, t) -> -f * 0.8F)
+            .put(BREATH_VOLUME, f -> MathUtils.project(f, 0.45F, 1F) * 0.9F)
+            .put(BREATH_SPEED, f -> -MathUtils.project(f, 0.45F, 1F) * 0.75F)
+            .put(SOUND_VOLUME, f -> 1 - MathUtils.project(f, 0.55F, 1F) * 0.65F)
+            .put(DROWSYNESS, f -> MathUtils.project(f, 0.35F, 1F) * 0.9F)
+            .put(MOTION_BLUR, f -> MathUtils.project(f, 0.52F, 1F) * 1.35F)
+            .put(DESATURATION_HALLUCINATION_STRENGTH, f -> MathUtils.project(f, 0.58F, 1F) * 0.8F)
+            .put(BLOOM_HALLUCINATION_STRENGTH, f -> MathUtils.project(f, 0.65F, 1F) * 0.7F)
+            .put(VIEW_TREMBLE_STRENGTH, f -> 0.002F + MathUtils.project(f, 0.68F, 1F) * 0.18F)
             .put(HAND_TREMBLE_STRENGTH, 0.001F)
-            .put(VIEW_TREMBLE_STRENGTH, 0.002F)
             .put(PAIN_SUPPRESSION, f -> 1 - f * 0.6F)
             .build();
 

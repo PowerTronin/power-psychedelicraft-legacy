@@ -92,6 +92,15 @@ public class DrugMusicManager implements NbtSerialisable {
         return MathHelper.lerp(delta, prevHeartbeatPulseStrength, heartbeatPulseStrength);
     }
 
+    public void reset() {
+        delayUntilHeartbeat = 0;
+        delayUntilBreath = 0;
+        lastBreathWasIn = false;
+        prevHeartbeatPulseStrength = 0;
+        heartbeatPulseStrength = 0;
+        targetHeartbeatPulseStrength = 0;
+    }
+
     @Override
     public void toNbt(NbtCompound compound) {
         compound.putInt("delayUntilHeartbeat", delayUntilHeartbeat);

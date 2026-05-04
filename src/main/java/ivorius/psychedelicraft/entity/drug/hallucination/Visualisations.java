@@ -48,6 +48,11 @@ public class Visualisations {
         }
     }
 
+    void reset() {
+        activeHallucinations.clear();
+        hallucinationStrengths.clear();
+    }
+
     private void removeRandomHallucination(Random random) {
         activeHallucinations.removeInt(random.nextInt(activeHallucinations.size()));
     }

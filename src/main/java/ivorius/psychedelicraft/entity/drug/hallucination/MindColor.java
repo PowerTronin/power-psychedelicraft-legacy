@@ -23,4 +23,10 @@ public class MindColor {
     public Vector3f getColor(float tickDelta) {
         return MathUtils.lerp(tickDelta, prevValue, value, lerpedValue);
     }
+
+    void reset() {
+        prevValue.set(1, 1, 1);
+        value.set(1, 1, 1);
+        lerpedValue.set(1, 1, 1);
+    }
 }

@@ -53,6 +53,15 @@ public class EntityHallucinationList implements Iterable<Hallucination> {
         swap();
     }
 
+    public void reset() {
+        forcedTicks = 0;
+        prevForcedTicks = 0;
+        pending.clear();
+        synchronized (entities) {
+            entities.clear();
+        }
+    }
+
     public <T extends Hallucination> List<T> getHallucinations(Class<T> type) {
         synchronized (entities) {
             return entities.stream().filter(a -> a.getClass() == type).map(type::cast).toList();

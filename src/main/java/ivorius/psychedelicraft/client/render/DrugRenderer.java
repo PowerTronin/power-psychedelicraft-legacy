@@ -49,7 +49,8 @@ public class DrugRenderer {
             new PowerOverlayScreenEffect(),
             environmentalEffects,
             new TirednessScreenEffect(),
-            new MotionBlurScreenEffect()
+            new MotionBlurScreenEffect(),
+            new OpiateOverdoseScreenEffect()
     );
 
     private final PostEffectRenderer postEffects = new PostEffectRenderer();

@@ -60,6 +60,17 @@ public class HallucinationManager {
         }
     }
 
+    public void reset() {
+        entities.reset();
+        camera.reset();
+        visualisations.reset();
+        surfaceColor.reset();
+        bloomColor.reset();
+        pulseColor.reset();
+        skyColor.reset();
+        fractalType = 0;
+    }
+
     public DrugProperties getProperties() {
         return properties;
     }
